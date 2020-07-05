@@ -1,0 +1,63 @@
+{% macro products(name, classes, products) %}
+
+<section class="shop {{classes}}">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">ANUNCIE AQUI</div>
+            <div class="swiper-slide">ANUNCIE AQUI</div>
+            <div class="swiper-slide">ANUNCIE AQUI</div>
+            <div class="swiper-slide">ANUNCIE AQUI</div>
+            <div class="swiper-slide">ANUNCIE AQUI</div>
+        </div>
+        {# <!-- Add Pagination -->
+        <div class="swiper-pagination"></div> #}
+    </div>
+            
+    {% if name %}
+        <h2>{{name}}</h2>
+    {% endif %}
+
+        <div class="items">
+            {% for product in products %}
+                <div class="product">
+                    <div 
+                        class="image" 
+                        style="background-image: url('{{product.img if product.img else '//placehold.it/500x360'}}')"
+                    
+                    >   
+                    </div>
+                    
+                        {% if product.formatedOldPrice != product.formatedPrice %}
+                            <div class="old-price">{{product.formatedOldPrice}}</div>
+                        {% endif %}
+                            <p>{{product.formatedPrice}}</p>
+                            <h4>{{product.name}}</h4>
+
+                        <a href="/products/{{product.id}}" class="button">Ver Produto</a>
+                </div>
+            {% endfor %}
+        </div>
+</section>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    {# <script>
+            var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows : true,
+            },
+                loop: true,
+                autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            });
+    </script> #}
+{% endmacro %}
+ 

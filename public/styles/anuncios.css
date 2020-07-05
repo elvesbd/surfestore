@@ -1,0 +1,28 @@
+.swiper-container {
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  }
+
+  .swiper-wrapper {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 170px;
+    height: 150px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 10px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    /*-webkit-box-reflect: below 1px linear-gradient(transparente, transparente, #0006);*/
+  }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        {% block head %}
+            <title>Surfe-Story</title>
+        {% endblock head %}
+
+        {% include "parts/styles.njk" %}
+    </head>
+
+    <body>
+
+        {% include "parts/messages.njk" %}
+
+        {% include "parts/header.njk" %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include "parts/footer.njk" %}
+
+    </body>
+
+</html>
